@@ -1,0 +1,200 @@
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+	<span style = "color:green">
+		<title>EP03 Ejercicios JavaScript</title>
+  	<span/>
+	<style>
+		body
+		{
+			background: url("http://www.fondosya.com/wallpapers/lineas_y_bordes_color_verde-1280x800.jpg") no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+ 
+	</style>
+
+ 	<script type="text/javascript" languaje="javascript">
+
+		function convertirGalones()
+		{
+	    		form.respuesta.value=3.7854*form.Galones.value;
+		}
+		
+		function Centigrados_Fahrenheit()
+		{   
+	      		form2.respuesta.value=(1.8*form2.Centigrado.value)+32;
+	        }
+	   
+	   	function Centigrados_Kelvin()
+		{
+	            	form3.respuesta.value=parseFloat(form3.Centigrado.value)+273.15;
+	  	}
+	   
+		function Fahrenheit_Centigrado()
+		{   
+	        	form4.respuesta.value=(form4.Fahrenheit.value-32)/1.8;
+      		}
+	   
+	   	function Kelvin_Centigrado()
+		{
+		        form5.respuesta.value=form5.Kelvin.value-273.15;
+		}
+	   
+   		function Gravedad_Luna()
+		{
+		        form6.respuesta.value=form6.Peso.value/6;
+	  	}
+	   
+	   	function Area_Circulo()
+		{
+	       		with (Math) {  
+			        form7.respuesta.value=form7.Radio.value*form7.Radio.value*PI;
+			}
+		}
+	   
+	   	function Area_Triangulo ()
+		{
+			form8.respuesta.value=(form8.Base.value*form8.Altura.value)/2;
+		}
+	
+		function Area_Cuadrado()
+		{
+	        	form9.respuesta.value=form9.Lado.value*form9.Lado.value;
+	        }
+	   
+		function Vocales()
+		{
+	       		var Frase1;
+		        form10.Frase.value=form10.Frase.value.replace(/[^a,e,i,o,u,A,E,I,O,U]/g, '');
+			form10.respuesta.value=form10.Frase.value.length;
+		}
+	
+	</script>
+    </head>
+    <body>
+	
+       <div>
+       <h2> EP03 JavaScript </h2>
+       <h3> 1. Script que permite realizar la conversion de galones a litros</h3>
+   	<form name="form">
+
+        	&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbspIntroduzca el Numero de Galones
+	        <input TYPE="TEXT" NAME="Galones" size="10">
+	        <input TYPE="BUTTON" VALUE="Calcular" 	onClick=convertirGalones()> <p>
+	
+	        &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp El numero de Litros es:
+	        <input type="text" name="respuesta" size="20" border="0">
+
+        </form>
+            
+       <h3> 2. Script que permite realizar la conversion entre las diferentes unidades de temperatura</h3>
+       <h5> &nbsp;&nbsp;&nbsp;2.1 Script que permite convertir de grados Centigrados a Grados Fahrenheit</h5>
+       <form name="form2">
+		&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp Introduzca Grados Centigrados
+                <input TYPE="TEXT" NAME="Centigrado" size="10">
+                <input TYPE="BUTTON" VALUE="Calcular" onClick=Centigrados_Fahrenheit()> <p>
+
+                &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp Grados Fahrenheit es:
+                <input type="text" name="respuesta" size="20" border="0">
+
+	</form>
+                              
+        <h5> &nbsp;&nbsp;&nbsp;2.2 Script que permite convertir de grados Centigrados a Grados Kelvin</h5>
+        <form name="form3">
+        	&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp Introduzca Grados Centigrados
+                <input TYPE="TEXT" NAME="Centigrado" size="10">
+                <input TYPE="BUTTON" VALUE="Calcular" onClick=Centigrados_Kelvin()> <p>
+
+                &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp Grados Kelvin es:
+                <input type="text" name="respuesta" size="20" border="0">
+
+	</form>
+                 
+	<h5> &nbsp;&nbsp;&nbsp;2.3 Script que permite convertir de grados Fahrenheit a Grados Centigrados</h5>
+        <form name="form4">
+                &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp Introduzca Grados Fahrenheit
+                <input TYPE="TEXT" NAME="Fahrenheit" size="10">
+                <input TYPE="BUTTON" VALUE="Calcular" onClick=Fahrenheit_Centigrado()> <p>
+
+                &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp Grados Centigrados es:
+                <input type="text" name="respuesta" size="20" border="0">
+
+	</form>
+                                
+	<h5> &nbsp;&nbsp;&nbsp;2.3 Script que permite convertir de grados Kelvin a Grados Centigrados</h5>
+        <form name="form5">
+        	&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp Introduzca Grados Kelvin
+                <input TYPE="TEXT" NAME="Kelvin" size="10">
+                <input TYPE="BUTTON" VALUE="Calcular" onClick=Kelvin_Centigrado()> <p>
+
+                &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp Grados Centigrados es:
+                <input type="text" name="respuesta" size="20" border="0">
+
+        </form>
+                           
+        <h3> 3. Script que permite calcular su peso corporal en la Luna</h3>
+        <form name="form6">
+                &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbspIntroduzca Peso Corporal
+                <input TYPE="TEXT" NAME="Peso" size="10">
+                <input TYPE="BUTTON" VALUE="Calcular" onClick=Gravedad_Luna()> <p>
+
+                &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp Su peso en la luna es:
+                <input type="text" name="respuesta" size="20" border="0">
+
+        </form>        
+                                          
+        <h3> 4. Script que permite calcular el area de un Circulo,Triangulo,Cuadrado.</h3>
+        <h5> &nbsp;&nbsp;&nbsp;2.1 Script que permite calcular el area de un circulo</h5>
+        <form name="form7">
+                &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbspIntroduzca Radio del Circulo
+                <input TYPE="TEXT" NAME="Radio" size="10">
+                <input TYPE="BUTTON" VALUE="Calcular" onClick=Area_Circulo()> <p>
+
+                &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp El Area de Circulo es:
+                <input type="text" name="respuesta" size="20" border="0">
+
+        </form>       
+               
+        <h5> &nbsp;&nbsp;&nbsp; 2.2 Script que permite calcular el area del triangulo.</h5>
+        <form name="form8">
+                &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbspIntroduzca Ingrese la Base del Triangulo
+                <input TYPE="TEXT" NAME="Base" size="10">
+                 
+		&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbspIntroduzca Ingrese la Altura del Triangulo
+                <input TYPE="TEXT" NAME="Altura" size="10">
+                <input TYPE="BUTTON" VALUE="Calcular" onClick=Area_Triangulo()> <p>
+
+                &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp El Area del Triangulo es:
+                <input type="text" name="respuesta" size="20" border="0">
+
+	</form>    
+        <h5> &nbsp;&nbsp;&nbsp; 2.3 Script que permite calcular el area de un cuadrado</h5>
+        <form name="form9">
+                &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbspIntroduzca Ingrese un Lado del Cuadrado
+                <input TYPE="TEXT" NAME="Lado" size="10">
+                <input TYPE="BUTTON" VALUE="Calcular" onClick=Area_Cuadrado()> <p>
+        
+	        &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp El Area del cuadrado  es:
+                <input type="text" name="respuesta" size="20" border="0">
+
+        </form>    
+            
+        <h3> 5. Script que cuenta el numero de vocales que contiene un String</h3>
+        <form name="form10">
+                &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp Ingrese la frase
+                <input TYPE="TEXT" NAME="Frase" size="10">
+                <input TYPE="BUTTON" VALUE="Contar" onClick=Vocales()> <p>
+
+                &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp Numero de vocales en la frase:
+                <input type="text" name="respuesta" size="20" border="0">
+
+        </form> 
+                          
+            
+	</div>
+	</body>
+</html>
